@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import sampleRaw from './sample.json';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  sample = sampleRaw;
+}
+
+if (sampleRaw === undefined) {
+  throw Error('sample raw is undefined');
+} else {
+  console.log(sampleRaw);
 }
